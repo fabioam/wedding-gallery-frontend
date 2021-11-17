@@ -1,0 +1,39 @@
+.nav-link {
+    font-size: 0.8em;
+}
+
+.ant-layout {
+    background: white;
+}
+
+.brand-logo {
+    width: 120px;
+}
+
+.ant-btn, .ant-btn {
+    color: #947c55;
+    border-color: #c59761;
+    background: #fff;
+}
+
+.ant-btn:hover, .ant-btn:focus {
+    color: #bc9d6c;
+    border-color: #947b59;
+    background: #fff;
+}
+
+.anticon-delete {
+    color: #fb5555;
+}
+
+.anticon-check {
+    color: #34a634;
+}
+
+.navbar-toggler, .nav-item{
+    text-align: right;
+}
+
+a {
+    color: #7a7a7a !important;
+}
