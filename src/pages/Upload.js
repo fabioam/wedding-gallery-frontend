@@ -168,7 +168,7 @@ export default function Upload() {
     return (
         <div className="App">
             <Uploady
-                destination={{ url:  "/gallery/" }}
+                destination={{ url: `${process.env.REACT_APP_API_URL}/gallery/` }}
                 inputFieldName="image"
                 enhancer={retryEnhancer}>
                 <UploadUi />

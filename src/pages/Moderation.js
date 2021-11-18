@@ -10,7 +10,7 @@ import React from "react";
 const GalleryState = rj({
     effectCaller: rj.configured(),
     effect: (token) => () =>
-        ajax.getJSON(`/gallery/pending/`, {
+        ajax.getJSON(`${process.env.REACT_APP_API_URL}/gallery/pending/`, {
             Authorization: `Bearer ${token}`,
         }),
 })
@@ -24,7 +24,7 @@ export default function Moderation(asdas) {
 
     const onApprove = (id) => {
         console.log(asdas);
-        axios.patch(`/gallery/approve/${id}/`, {}, {
+        axios.patch(`${process.env.REACT_APP_API_URL}/gallery/approve/${id}/`, {}, {
                 headers: { Authorization: `Bearer ${token}` }
             })
             .then(res => {
@@ -34,7 +34,7 @@ export default function Moderation(asdas) {
     const onReject = (id) => {
         console.log(token);
 
-        axios.delete(`/gallery/pending/${id}/`, {
+        axios.delete(`${process.env.REACT_APP_API_URL}/gallery/pending/${id}/`, {
             headers: { Authorization: `Bearer ${token}` }
         })
         .then(res => {

@@ -14,7 +14,7 @@ import "./styles.css";
 
 const login = (credentials = {}) =>
     ajax({
-        url: "/token/",
+        url: `${process.env.REACT_APP_API_URL}/token/`,
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -28,13 +28,13 @@ const login = (credentials = {}) =>
     )
 
 const me = token =>
-    ajax.getJSON("/me/", {
+    ajax.getJSON(`${process.env.REACT_APP_API_URL}/me/`, {
         Authorization: `Bearer ${token}`,
     })
 
 const refresh = refreshToken =>
     ajax({
-        url: "/token/refresh/",
+        url: `${process.env.REACT_APP_API_URL}/token/refresh/`,
         method: "POST",
         headers: {
             "Content-Type": "application/json",

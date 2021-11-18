@@ -4,7 +4,7 @@ import { ajax } from 'rxjs/ajax'
 const GalleryState = rj({
     effectCaller: rj.configured(),
     effect: () => () =>
-        ajax.getJSON(`/gallery/`),
+        ajax.getJSON(`${process.env.REACT_APP_API_URL}/gallery/`),
 })
 
 export default function Gallery() {
